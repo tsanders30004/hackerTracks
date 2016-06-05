@@ -1,0 +1,76 @@
+<!doctype html>
+<html>
+<head>
+     <meta charset="UTF-8">
+     <title>Hacker Track 4</title>
+     <style>
+     body {
+          font-family: Verdana;
+     }
+
+     </style>
+
+     <script src="jquery.js"></script>
+
+     <script>
+
+     //Please use the instructions below to complete Hacker Track Week 4. Once finished, email a saved .html file with your answers to hello@digitalcrafts.com with "Hacker Week 4 - First Name & Last Name" in the subject line.
+
+
+     //EXERCISE
+     //Write a program that, given an age in seconds, calculates how old someone is in terms of a given planet's solar years.
+
+
+     //DETAILS
+     // Given an age in seconds, calculate how old someone would be on:
+
+     // Earth: orbital period 365.25 Earth days, or 31557600 seconds
+     // Mercury: orbital period 0.2408467 Earth years
+     // Venus: orbital period 0.61519726 Earth years
+     // Mars: orbital period 1.8808158 Earth years
+     // Jupiter: orbital period 11.862615 Earth years
+     // Saturn: orbital period 29.447498 Earth years
+     // Uranus: orbital period 84.016846 Earth years
+     // Neptune: orbital period 164.79132 Earth years
+
+     // So if you were told someone were 1,000,000,000 seconds old, you should be able to say that they're 31 Earth-years old.
+
+
+     //Place code below:
+
+     //   1 year              1 day          1 hour         N seconds      N seconds
+     //   ------------- *     --------  *    ------------ * --------- =    ---------
+     //   X planet days       24 hours       3600 seconds   1              X * 86400
+
+
+     // var p = prompt('enter a planet');
+     var s = prompt('enter age in seconds');
+
+     function ageInPlanetSolarYears(seconds) {
+          var secondsToEarthYears = seconds / 31557600.0;
+
+          console.log(seconds + ' seconds is ' + secondsToEarthYears * 0.24084670 + ' years on Mercury');
+          console.log(seconds + ' seconds is ' + secondsToEarthYears * 0.61519726 + ' years on Venus');
+          console.log(seconds + ' seconds is ' + secondsToEarthYears * 1.00000000 + ' years on Earth');
+          console.log(seconds + ' seconds is ' + secondsToEarthYears * 1.88081580 + ' years on Mars');
+          console.log(seconds + ' seconds is ' + secondsToEarthYears * 11.8626150 + ' years on Jupiter');
+          console.log(seconds + ' seconds is ' + secondsToEarthYears * 29.4474980 + ' years on Saturn');
+          console.log(seconds + ' seconds is ' + secondsToEarthYears * 84.0168460 + ' years on Uranus');
+          console.log(seconds + ' seconds is ' + secondsToEarthYears * 164.791320 + ' years on Neptune');
+     }
+
+     function showAge(seconds) {
+          console.log(ageInPlanetSolarYears(s));
+     }
+
+     showAge(s);
+     </script>
+</head>
+
+<body>
+     <p>Hacker Track Week 4</p>
+     <p>Tim Sanders</p>
+     <p>30 May 2016</p>
+     <p>results shown in console</p>
+</body>
+</html>

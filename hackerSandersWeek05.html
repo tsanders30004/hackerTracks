@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+     <meta charset="utf-8">
+     <title>Hacker Track Week 5</title>
+     <style>
+     body {
+          font-family: Verdana;
+     }
+     </style>
+     <script>
+     //Once finished, email a saved .html file with your answers to hello@digitalcrafts.com with "Hacker Week 5 - First Name & Last Name" in the subject line.
+
+     //a) Given an array x (e.g. [1,5, 10, -2]), create an algorithm (sets of instructions) that replaces any negative number with the value of 0.When the program is done x should have no negative values (e.g. [1, 5, 10, 0]).
+
+     var myArray = [1, -1, 2, -2, 3, -3, 4, -4, 5, -5, 11];
+     var outArray;
+
+     console.log('myArray = [' + myArray + ']');
+     console.log('---------------------------------------------------------------------')
+     function noNeg(arr) {
+          var newArray = [];
+          newArray = arr.map(function(x){return x >= 0 ? x : 0});
+          // console.log( + newArray);
+          return newArray;
+     }
+     outArray = noNeg(myArray);
+     console.log('noNeg(myArray) = [' + outArray + ']');
+
+     //b) Given an array x (e.g. [1,5, 10, -2]), create an algorithm (sets of instructions) that returns an array with the max, min, and average values ([max, min, avg]. ex [0,2,4] should return [4,0,2]).
+
+     function maxMinAvg(arr) {
+          var arrNew = [];
+          var max = arr[0];
+          var min = arr[0];
+          var avg = arr[0];
+
+          max = arr.reduce(function(x1, x2){return x1 > x2 ? x1 : x2});
+          min = arr.reduce(function(x1, x2){return x1 < x2 ? x1 : x2});
+          avg = arr.reduce(function(x1, x2){return x1 + x2}) / arr.length;
+
+          return [max, min, avg];
+     }
+     outArray = maxMinAvg(myArray);
+     console.log('maxMinAvg(myArray) = [' + outArray + ']');
+
+     //c) Write a function that takes an array as an argument and return an array with the first and last values swapped. The array will have a minimum length of 2 (ex. [1,5,10,-2] should return [-2,5,10,1]).
+
+     function swap(arr) {
+          var first = arr[0];
+          var last = arr[arr.length - 1];
+          var middle = arr.slice(1, length-1);
+          return [arr[arr.length - 1], arr.slice(1, length-1), arr[0]];
+     }
+     outArray = swap(myArray);
+     console.log('swap(myArray) = [' + outArray + ']');
+
+     //d) Write a function that takes an array of numbers and replaces any number that's negative to a string called 'DigitalCrafts'. For example if array = [-1,-3,2] should return ['DigitalCrafts', 'DigitalCrafts', 2].
+
+     function numToStr(arr) {
+          var newArray = [];
+          newArray = arr.map(function(x){return x >= 0 ? x : 'DigitalCrafts'});
+          // console.log( + newArray);
+          return newArray;
+     }
+     outArray = numToStr(myArray);
+     console.log('numToStr(myArray) = [' + outArray + ']');
+     </script>
+
+</head>
+<body>
+     <h1>Tim Sanders</h1>
+     <h3>Hacker Track Week 5</h3><br>
+     <p>output is shown in the console.</p>
+</body>
+</html>
